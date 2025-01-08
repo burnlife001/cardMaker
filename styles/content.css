@@ -1,0 +1,25 @@
+#card-maker-floating-button {
+  position: fixed;
+  z-index: 999999;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+#card-maker-floating-button:hover {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#card-maker-floating-button img {
+  width: 20px;
+  height: 20px;
+} 

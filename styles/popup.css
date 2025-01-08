@@ -1,0 +1,255 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 预览区域样式 */
+.preview-area {
+    flex: 1;
+    min-width: 400px;
+}
+
+#card-preview {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#selected-text {
+    width: 100%;
+    min-height: 100px;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#selected-text:focus {
+    outline: none;
+}
+
+/* 设置面板样式 */
+.settings-panel {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 文字工具栏样式 */
+.text-toolbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.text-toolbar select,
+.text-toolbar input {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.toolbar-btn {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-btn:hover {
+    background: #f5f5f5;
+}
+
+.toolbar-btn.active {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    color: #2196f3;
+}
+
+.toolbar-btn i {
+    font-size: 16px;
+}
+
+/* 对齐按钮工具栏 */
+.text-align-toolbar {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.align-btn {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-btn:hover {
+    background: #f5f5f5;
+}
+
+.align-btn.active {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    color: #2196f3;
+}
+
+.align-btn i {
+    font-size: 16px;
+}
+
+/* 背景选项样式 */
+.bg-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.bg-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.bg-option.active {
+    border-color: #2196f3;
+}
+
+/* 尺寸选项样式 */
+.size-options {
+    display: flex;
+    gap: 8px;
+}
+
+.size-btn {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.size-btn:hover {
+    background: #f5f5f5;
+}
+
+.size-btn.active {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    color: #2196f3;
+}
+
+/* 导出按钮样式 */
+.export-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.export-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.export-btn:hover {
+    background: #1976d2;
+}
+
+/* 背景渐变样式 */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient1, .bg-option[data-bg="gradient1"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient2, .bg-option[data-bg="gradient2"] {
+    background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
+}
+
+.bg-gradient3, .bg-option[data-bg="gradient3"] {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.bg-gradient4, .bg-option[data-bg="gradient4"] {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+/* 卡片尺寸 */
+.size-small #card-preview {
+    width: 400px;
+    height: 300px;
+}
+
+.size-medium #card-preview {
+    width: 500px;
+    height: 400px;
+}
+
+.size-large #card-preview {
+    width: 600px;
+    height: 500px;
+}

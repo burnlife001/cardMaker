@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>卡片制作</title>
+  <link rel="stylesheet" href="styles/popup.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="preview-area size-medium">
+      <div id="card-preview" class="gradient-bg">
+        <div id="selected-text" contenteditable="true"></div>
+      </div>
+    </div>
+    
+    <div class="settings-panel">
+      <div class="section">
+        <h3>文字编辑</h3>
+        <div class="text-toolbar">
+          <select id="font-family" class="toolbar-item">
+            <option value="Microsoft YaHei">微软雅黑</option>
+            <option value="SimSun">宋体</option>
+            <option value="KaiTi">楷体</option>
+            <option value="SimHei">黑体</option>
+            <option value="YouYuan">幼圆</option>
+          </select>
+          <select id="font-size" class="toolbar-item">
+            <option value="12">12px</option>
+            <option value="14">14px</option>
+            <option value="16" selected>16px</option>
+            <option value="18">18px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="28">28px</option>
+            <option value="32">32px</option>
+            <option value="36">36px</option>
+            <option value="42">42px</option>
+          </select>
+          <input type="color" id="font-color" class="toolbar-item" value="#333333">
+          <button id="bold-btn" class="toolbar-btn" title="粗体"><i class="ri-bold"></i></button>
+          <button id="italic-btn" class="toolbar-btn" title="斜体"><i class="ri-italic"></i></button>
+          <button id="underline-btn" class="toolbar-btn" title="下划线"><i class="ri-underline"></i></button>
+        </div>
+        <div class="text-align-toolbar">
+          <button class="align-btn active" data-align="left" title="左对齐"><i class="ri-align-left"></i></button>
+          <button class="align-btn" data-align="center" title="居中对齐"><i class="ri-align-center"></i></button>
+          <button class="align-btn" data-align="right" title="右对齐"><i class="ri-align-right"></i></button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>背景样式</h3>
+        <div class="bg-options">
+          <div class="bg-option active" data-bg="gradient1"></div>
+          <div class="bg-option" data-bg="gradient2"></div>
+          <div class="bg-option" data-bg="gradient3"></div>
+          <div class="bg-option" data-bg="gradient4"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>卡片尺寸</h3>
+        <div class="size-options">
+          <button class="size-btn" data-size="small">小</button>
+          <button class="size-btn active" data-size="medium">中</button>
+          <button class="size-btn" data-size="large">大</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>导出设置</h3>
+        <select class="export-select" id="export-format">
+          <option value="png">PNG</option>
+          <option value="jpeg">JPG</option>
+        </select>
+        <button id="export-btn" class="export-btn">导出图片</button>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/popup.js"></script>
+</body>
+</html>
